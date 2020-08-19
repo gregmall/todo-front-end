@@ -8,14 +8,14 @@ export function userSignUp(userData) {
         return request.post(`${URL}/auth/signup`, userData);
 
     } catch(e) {
-      throw { error: e.message }
+      return { error: e.message }
     }
 };
 export function userSignIn(userData) {
     try {
         return request.post(`${URL}/auth/signin`, userData)
     }catch(e){
-        throw { error: e.message }
+        return { error: e.message }
     }
 }
 
