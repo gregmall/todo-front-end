@@ -31,7 +31,7 @@ export default class AuthPage extends Component {
             password: this.state.signInPassword
         });
         this.props.handleToken(user.body.token);
-        this.props.history.push('/');
+        this.props.history.push('/todo');
     }
 
 

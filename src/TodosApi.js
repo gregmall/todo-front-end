@@ -33,5 +33,11 @@ export function getTodos() {
     }
 }
 
+export function createTodo(todoData){
+    const token = localStorage.getItem('token');
+    return request.post(`${URL}/api/todos`, todoData)
+        .set('Authorization', token);
+}
+
 
 
