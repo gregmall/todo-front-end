@@ -37,7 +37,21 @@ export function createTodo(todoData){
     const token = localStorage.getItem('token');
     return request.post(`${URL}/api/todos`, todoData)
         .set('Authorization', token);
+        
+}
+export function getTodo(id) {
+    const token = localStorage.getItem('token');
+    return request.get(`${URL}/api/todos/${id}`)
+        .set('Authorization', token);
 }
 
 
+export function deleteTodo(id) {
+    console.log(id);
+    const token = localStorage.getItem('token');
+     return request.delete(`${URL}/api/todos/${id}`)
+        .set('Authorization', token);
+         
+     
+ }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getTodos, createTodo } from './TodosApi.js';
+import { getTodos, createTodo, deleteTodo } from './TodosApi.js';
 import { Link } from 'react-router-dom';
 export default class TodoPageList extends Component {
     
@@ -38,11 +38,16 @@ handleSubmit = async (e) => {
         console.log(e.message)
     }
 }
+handleDelete = async () => {
+    await deleteTodo(this.props.match.params.id);
+
+    this.props.history.push('/');
+}
 
 
     render() {
         return (
-            <div>
+            <div className="list">
                 {
                     this.state.todos.map((todo) => {
                         return <Link to={`/todos/${todo.id}`}>
@@ -62,7 +67,7 @@ handleSubmit = async (e) => {
                     </label>
                     <button>New Todo For You</button>
                    </form>
-
+                   <button  onClick={this.handleDelete}>Delete</button>
                    
                </div>
 

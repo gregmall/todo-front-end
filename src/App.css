@@ -15,3 +15,38 @@
   justify-content: center;
   padding: 20px;
 }
+.links {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  
+}
+li {
+  padding: 5px;
+}
+main {
+  background-color: cadetblue;
+  min-height: 100vh;
+}
+header {
+ 
+
+  display: flex;
+  padding: 20px;
+  background-color: #eb6434;
+
+}
+.list {
+
+background-color: aquamarine;
+width: 400px;
+padding: 20px;
+
+}
+.addtodo {
+  
+}

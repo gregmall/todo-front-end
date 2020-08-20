@@ -12,6 +12,7 @@ import {
 import AuthPage from './AuthPage.js';
 import TodoListPage from './TodoListPage.js';
 import HomePage from './HomePage.js';
+import Header from './Header.js'
 import './App.css';
 
 
@@ -38,18 +39,21 @@ export default class App extends Component {
             
              
                 <Router>
-          
-             <div>
+                  <Header />
+          <main>
+            
+          <div className="links">
                {
                  this.state.token &&
-                 <>
-               <Link to='/'>Home</Link>
-               <Link to='/login'>login</Link>
-               <Link to='/todo'>list</Link>
-                </>
+                 <ul>
+               <li><Link to='/'>Home</Link></li>
+
+
+               <li><Link to='/login'>login</Link></li>
+               <li><Link to='/todo'>list</Link></li>
+               </ul>
               }
              </div>
-           
               
               
                     <Switch>
@@ -73,7 +77,7 @@ export default class App extends Component {
   
                     
                     </Switch>
-                  
+                    </main>
                 </Router>
             </div>
         )
