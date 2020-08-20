@@ -19,6 +19,19 @@ export function userSignIn(userData) {
     }
 }
 
+export function getTodos() {
+    const token = localStorage.getItem('token');
+
+    try {
+        return request
+            .get(`${URL}/api/todos`)
+            .set('Authorization', token);
+    
+
+    }catch(e){
+        return { error: e.message }
+    }
+}
 
 
 

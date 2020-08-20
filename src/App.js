@@ -38,14 +38,17 @@ export default class App extends Component {
             
              
                 <Router>
-           {
-             this.state.token&&
+          
              <div>
-               
+               {
+                 this.state.token &&
+                 <>
                <Link to='/'>Home</Link>
-               <Link to='/login'></Link>
+               <Link to='/login'>login</Link>
+                </>
+              }
              </div>
-           }
+           
               
               
                     <Switch>

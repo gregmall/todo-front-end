@@ -37,32 +37,35 @@ export default class AuthPage extends Component {
 
     render() {
         return (
-            <div>
-                
+            <div className="forms">
+                <div className="signin">
                 <form onSubmit={this.handleSignIn}>
-                    Sign in? (returning user)
+                    Sign in? (returning user)<br/>
                     <label>
                         Email: 
                         <input onChange={e => this.setState({ signInEmail: e.target.value})} value={this.state.signInEmail}/>
-                    </label>
+                    </label><br/>
                     <label>
-                        Password:
+                        Password: <br/>
                         <input onChange={e => this.setState({ signInPassword: e.target.value})} value={this.state.signInPassword}/>
-                    </label>
+                    </label><br/>
                     <button>Submit</button>
                 </form>
+                </div>
+                <div className="signup">
                 <form onSubmit={this.handleSignUp}>
-                    Sign up?
-                    <label>
+                    Sign up?(new user)
+                    <label><br/>
                         Email: 
                         <input onChange={e => this.setState({ signUpEmail: e.target.value})} value={this.state.signUpEmail}/>
-                    </label>
+                    </label><br/>
                     <label>
                         Password:
                         <input onChange={e => this.setState({ signUpPassword: e.target.value})} value={this.state.signUpPassword}/>
-                    </label>
+                    </label><br/>
                     <button>Submit</button>
                 </form>
+                </div>
             </div>
         )
     }
