@@ -27,7 +27,7 @@ export default class TodoPageList extends Component {
             <div>
                 {
                     this.state.todos.map((todo) => {
-                        return <Link to={`/api/todos/${todo.id}`}>
+                        return <Link to={`/todos/${todo.id}`}>
                             <p>Todo: {todo.todo}
                             </p>
                             <p>Completed: {todo.completed}

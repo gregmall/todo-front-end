@@ -45,6 +45,7 @@ export default class App extends Component {
                  <>
                <Link to='/'>Home</Link>
                <Link to='/login'>login</Link>
+               <Link to='/todo'>list</Link>
                 </>
               }
              </div>
